@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Immigration Reports | Immigration Documentation Specialists</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/logo/icon-removebg-preview.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/logo/icon-removebg-preview.png">
+
+<!-- Apple / iPhone / iPad icon -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Web App Manifest (optional but good for PWA/Android) -->
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Windows / Safari Tab Color (optional) -->
+<meta name="theme-color" content="#0b1f3a">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --primary:#0B1F3A;
+  --accent:#C9A24D;
+  --bg:#F5F7FA;
+  --white:#ffffff;
+  --text:#1f2933;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 1rem;
+}
+
+h1,h2,h3{
+  color:var(--primary);
+  font-weight:700;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1.2rem 0;
+}
+
+nav a{
+  margin-left:1.5rem;
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:500;
+}
+
+.btn{
+  padding:.75rem 1.5rem;
+  border-radius:9px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.btn-outline{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+
+/* ================= SECTION ================= */
+.section{
+  padding:5rem 0;
+}
+
+.section-title{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 4rem;
+}
+
+.section-title p{
+  color:#475569;
+}
+
+/* ================= CARD GRID ================= */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  margin:-1rem;
+}
+
+.col{
+  width:100%;
+  padding:1rem;
+}
+
+@media(min-width:1024px){
+  .col-3{width:33.333%;}
+}
+
+
+/* ================= FOOTER ================= */
+.site-footer{
+  background:linear-gradient(180deg,#08162e,#050f22);
+  color:#e5e7eb;
+  padding-top:70px;
+  margin-top:80px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:60px;
+  padding-bottom:50px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand p{
+  max-width:420px;
+  line-height:1.6;
+  color:#cbd5e1;
+}
+
+.footer-links h4{
+  font-size:1rem;
+  margin-bottom:16px;
+  color:#ffffff;
+}
+
+.footer-links a{
+  display:block;
+  color:#cbd5e1;
+  text-decoration:none;
+  margin-bottom:10px;
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{color:#ffffff;}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  font-size:0.9rem;
+}
+
+/* Left text */
+.footer-bottom-left{
+  color:#94a3b8;
+}
+
+/* Right text + link */
+.footer-bottom-right{
+  color:#cbd5e1;
+}
+
+.footer-bottom-right a{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.footer-bottom-right a:hover{
+  text-decoration:underline;
+}
+
+/* Mobile — stack vertically */
+@media(max-width:768px){
+  .footer-bottom{
+    flex-direction:column;
+    gap:6px;
+    text-align:center;
+  }
+}
+
+
+/* Responsive */
+@media(max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="immi-nav">
+  <div class="container header-inner">
+
+    <a href="/index" class="logo">
+      <img src="./logo/logo-removebg-preview.png" alt="Immigration Reports Logo" width="120px">
+    </a>
+
+    <!-- Burger Button (mobile only) -->
+    <button class="immi-nav__burger" id="immiBurgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="immi-nav__menu" id="immiNavMenu">
+      <a href="/index">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact Us</a>
+      <a href="https://calendly.com/immigrationreportsinc"
+         target="_blank"
+         class="btn btn-outline">
+        Book Consultation
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<style>
+  /* ==== Responsive Burger Menu (Scoped) ==== */
+
+.immi-nav__menu{
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+}
+
+.immi-nav__burger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:0;
+  cursor:pointer;
+}
+
+.immi-nav__burger span{
+  width:24px;
+  height:2px;
+  background:#0b1f3a;
+  transition:.3s;
+}
+
+/* ----- Mobile Mode ----- */
+@media(max-width:768px){
+
+  .immi-nav__burger{display:flex;}
+
+  .immi-nav__menu{
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    border-top:1px solid #e5e7eb;
+    padding:18px 20px;
+    display:none;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .immi-nav__menu.immi-show{
+    display:flex;
+  }
+
+  .immi-nav__menu a{
+    width:100%;
+  }
+}
+
+/* Burger → X animation */
+.immi-nav__burger.immi-active span:nth-child(1){
+  transform:rotate(45deg) translateY(7px);
+}
+.immi-nav__burger.immi-active span:nth-child(2){
+  opacity:0;
+}
+.immi-nav__burger.immi-active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-7px);
+}
+
+</style>
+<script>
+const immiBurger = document.getElementById("immiBurgerBtn");
+const immiMenu = document.getElementById("immiNavMenu");
+
+immiBurger.addEventListener("click", ()=>{
+  immiMenu.classList.toggle("immi-show");
+  immiBurger.classList.toggle("immi-active");
+});
+</script>
+
+
+<section class="privacy-section">
+  <div class="container">
+
+    <div class="privacy-header">
+      <h2>Terms & Conditions</h2>
+      <p>Usage terms governing our website, services, and payments.</p>
+    </div>
+
+    <div class="privacy-box">
+
+      <h3>1. Introduction</h3>
+      <p>
+        These Terms & Conditions (“Terms”) govern your use of the Immigration Reports Inc.
+        website and our immigration documentation and report-writing services. By accessing
+        our website, submitting an enquiry, or engaging our services, you agree to be bound
+        by these Terms.
+      </p>
+
+      <h3>2. Nature of Services</h3>
+      <p>
+        We provide professional documentation, analytical research, drafting and
+        report-preparation services for employer-sponsored visas and immigration-related
+        submissions. We do not provide legal advice or migration consultancy, and our
+        documents are prepared based on the information provided by the client.
+      </p>
+
+      <h3>3. Client Responsibility</h3>
+      <ul>
+        <li>Clients must provide accurate and truthful information and supporting evidence</li>
+        <li>Final decision-making authority always rests with the Department of Home Affairs</li>
+        <li>We are not liable for outcomes arising from misleading or incomplete information</li>
+      </ul>
+
+      <h3>4. Fees, Payments & Invoicing</h3>
+      <p>
+        Service fees are communicated before commencement of work. Work begins only after
+        confirmation of payment unless otherwise agreed in writing. All online payments are
+        processed securely via Razorpay and are subject to their platform terms.
+      </p>
+
+      <p>
+        We do not store card or banking details on our servers. Payment processing is handled
+        in accordance with Razorpay security standards and compliance policies.
+      </p>
+
+      <h3>5. Delivery Timelines</h3>
+      <p>
+        Estimated delivery timelines are indicative and may vary based on case complexity,
+        information availability, and revisions requested by the client.
+      </p>
+
+      <h3>6. Revisions & Scope</h3>
+      <p>
+        Service fees include reasonable revisions limited to the original agreed scope.
+        Additional revisions, new inputs, or structural changes may attract extra charges.
+      </p>
+
+      <h3>7. Intellectual Property</h3>
+      <p>
+        All drafts, research frameworks, templates and report formats prepared by us remain
+        our intellectual property. Final delivered documents are licensed for the client’s
+        official submission and usage only and may not be resold or republished.
+      </p>
+
+      <h3>8. Limitation of Liability</h3>
+      <p>
+        Our role is limited to documentation support. We shall not be liable for:
+      </p>
+      <ul>
+        <li>Visa outcomes or assessment decisions</li>
+        <li>Rejections resulting from client-provided information</li>
+        <li>Policy changes or government procedural variations</li>
+      </ul>
+
+      <h3>9. Refunds & Cancellation</h3>
+      <p>
+        Work once initiated or delivered — whether partially or fully — is generally
+        non-refundable, as our services involve time-based professional effort.
+        Refunds, where applicable, may be considered only at management discretion.
+      </p>
+
+      <h3>10. Use of Website</h3>
+      <p>
+        You agree not to misuse the website, copy content, attempt unauthorised access,
+        or engage in any activity that disrupts website functionality or security.
+      </p>
+
+      <h3>11. Governing Law & Jurisdiction</h3>
+      <p>
+        These Terms shall be governed by applicable laws of India. Any disputes arising
+        shall be subject to the jurisdiction of appropriate courts as applicable.
+      </p>
+
+      <h3>12. Updates to Terms</h3>
+      <p>
+        We may update these Terms periodically. Continued use of our website or services
+        constitutes acceptance of the revised Terms.
+      </p>
+
+      <h3>13. Contact</h3>
+      <p>
+        For queries relating to these Terms, please contact:<br>
+        <strong>Email:</strong> immireports@gmail.com
+      </p>
+
+      <p><em>Last updated: December 2025</em></p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .privacy-section{padding:90px 20px;background:#f8fafc}
+.privacy-header{text-align:center;max-width:760px;margin:0 auto 40px}
+.privacy-box{
+  background:#ffffff;border-radius:12px;padding:32px;
+  box-shadow:0 30px 60px rgba(11,31,58,.10);max-width:900px;margin:auto
+}
+.privacy-box h3{margin-top:18px;color:#0b1f3a}
+.privacy-box ul{margin:8px 0 12px 18px;color:#334155}
+.privacy-box p{color:#475569;line-height:1.6}
+
+</style>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <img src="./logo/logo-removebg-preview.png" alt="Logo" width="160">
+      <p>Australian immigration documentation specialists delivering compliant, decision-ready reports.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+     <a href="/privacypolicy">Privacy Policy</a>
+      <a href="/term">Terms & Conditions</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+
+  </div>
+
+ <div class="footer-bottom">
+  <div class="footer-bottom-left">
+    © 2025 Immigration Reports Inc. All rights reserved.
+  </div>
+
+  <div class="footer-bottom-right">
+    Powered by:
+    <a href="https://sourchtechnologies.com" target="_blank">
+      Sourch Technologies Private Limited
+    </a>
+  </div>
+</div>
+
+</footer>
+
+</body>
+</html>

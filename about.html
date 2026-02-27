@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Immigration Reports | Immigration Documentation Specialists</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/logo/icon-removebg-preview.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/logo/icon-removebg-preview.png">
+
+<!-- Apple / iPhone / iPad icon -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Web App Manifest (optional but good for PWA/Android) -->
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Windows / Safari Tab Color (optional) -->
+<meta name="theme-color" content="#0b1f3a">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --primary:#0B1F3A;
+  --accent:#C9A24D;
+  --bg:#F5F7FA;
+  --white:#ffffff;
+  --text:#1f2933;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 1rem;
+}
+
+h1,h2,h3{
+  color:var(--primary);
+  font-weight:700;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1.2rem 0;
+}
+
+nav a{
+  margin-left:1.5rem;
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:500;
+}
+
+.btn{
+  padding:.75rem 1.5rem;
+  border-radius:9px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.btn-outline{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+
+/* ================= SECTION ================= */
+.section{
+  padding:5rem 0;
+}
+
+.section-title{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 4rem;
+}
+
+.section-title p{
+  color:#475569;
+}
+
+/* ================= CARD GRID ================= */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  margin:-1rem;
+}
+
+.col{
+  width:100%;
+  padding:1rem;
+}
+
+@media(min-width:1024px){
+  .col-3{width:33.333%;}
+}
+
+
+/* ================= FOOTER ================= */
+.site-footer{
+  background:linear-gradient(180deg,#08162e,#050f22);
+  color:#e5e7eb;
+  padding-top:70px;
+  margin-top:80px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:60px;
+  padding-bottom:50px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand p{
+  max-width:420px;
+  line-height:1.6;
+  color:#cbd5e1;
+}
+
+.footer-links h4{
+  font-size:1rem;
+  margin-bottom:16px;
+  color:#ffffff;
+}
+
+.footer-links a{
+  display:block;
+  color:#cbd5e1;
+  text-decoration:none;
+  margin-bottom:10px;
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{color:#ffffff;}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  font-size:0.9rem;
+}
+
+/* Left text */
+.footer-bottom-left{
+  color:#94a3b8;
+}
+
+/* Right text + link */
+.footer-bottom-right{
+  color:#cbd5e1;
+}
+
+.footer-bottom-right a{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.footer-bottom-right a:hover{
+  text-decoration:underline;
+}
+
+/* Mobile — stack vertically */
+@media(max-width:768px){
+  .footer-bottom{
+    flex-direction:column;
+    gap:6px;
+    text-align:center;
+  }
+}
+
+
+/* Responsive */
+@media(max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="immi-nav">
+  <div class="container header-inner">
+
+    <a href="/index" class="logo">
+      <img src="./logo/logo-removebg-preview.png" alt="Immigration Reports Logo" width="120px">
+    </a>
+
+    <!-- Burger Button (mobile only) -->
+    <button class="immi-nav__burger" id="immiBurgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="immi-nav__menu" id="immiNavMenu">
+      <a href="/index">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact Us</a>
+      <a href="https://calendly.com/immigrationreportsinc"
+         target="_blank"
+         class="btn btn-outline">
+        Book Consultation
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<style>
+  /* ==== Responsive Burger Menu (Scoped) ==== */
+
+.immi-nav__menu{
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+}
+
+.immi-nav__burger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:0;
+  cursor:pointer;
+}
+
+.immi-nav__burger span{
+  width:24px;
+  height:2px;
+  background:#0b1f3a;
+  transition:.3s;
+}
+
+/* ----- Mobile Mode ----- */
+@media(max-width:768px){
+
+  .immi-nav__burger{display:flex;}
+
+  .immi-nav__menu{
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    border-top:1px solid #e5e7eb;
+    padding:18px 20px;
+    display:none;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .immi-nav__menu.immi-show{
+    display:flex;
+  }
+
+  .immi-nav__menu a{
+    width:100%;
+  }
+}
+
+/* Burger → X animation */
+.immi-nav__burger.immi-active span:nth-child(1){
+  transform:rotate(45deg) translateY(7px);
+}
+.immi-nav__burger.immi-active span:nth-child(2){
+  opacity:0;
+}
+.immi-nav__burger.immi-active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-7px);
+}
+
+</style>
+<script>
+const immiBurger = document.getElementById("immiBurgerBtn");
+const immiMenu = document.getElementById("immiNavMenu");
+
+immiBurger.addEventListener("click", ()=>{
+  immiMenu.classList.toggle("immi-show");
+  immiBurger.classList.toggle("immi-active");
+});
+</script>
+
+
+<!-- ============== ABOUT US PAGE ============== -->
+
+<!-- HERO -->
+<section class="hero hero-full">
+  <div class="hero-wrap">
+    <h1>About Immigration Reports Inc.</h1>
+    <p>
+      We specialise in preparing precise, DHA-aligned immigration documentation
+      for employer-sponsored visas across Australia.<br> Trusted by migration agents,
+      law firms and business sponsors nationwide.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- WHO WE ARE -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Who We Are</h2>
+      <p>Built on expertise, clarity, and professional accountability.</p>
+    </div>
+
+    <div class="story-grid">
+      <div class="story-block">
+        <p>
+          Immigration Reports Inc. was founded with a single purpose: to deliver
+          documentation that supports strong, defensible visa applications.
+          Our reports are structured, evidence-based, and aligned with
+          Department of Home Affairs assessment expectations.
+        </p>
+        <p>
+          We collaborate closely with registered migration agents, immigration
+          lawyers, and sponsoring employers to ensure every document is
+          accurate, consistent, and decision-ready.
+        </p>
+      </div>
+
+      <div class="story-image">
+        <img src="./logo/logo.png"
+             alt="Immigration Compliance Research">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VALUES — SAME CARD DESIGN + ICON IMAGES -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Core Principles</h2>
+      <p>The standards that guide every document we deliver.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="col col-3">
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3209/3209283.png">
+          </div>
+          <h3>Evidence-Led Reporting</h3>
+          <p>Every statement is backed by verifiable data, case logic, or industry benchmarks.</p>
+        </div>
+      </div>
+
+      <div class="col col-3">
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+          </div>
+          <h3>Compliance-Focused</h3>
+          <p>Structured in line with DHA policy intent and assessment expectations. and much more documentation</p>
+        </div>
+      </div>
+
+      <div class="col col-3">
+        <div class="card">
+          <div class="card-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+          </div>
+          <h3>Professional Accountability</h3>
+          <p>Clear methodology, transparent reasoning, and documentation consistency.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Specialist Team</h2>
+      <p>Experienced analysts, researchers, and documentation consultants.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/logo/krishna.png">
+        </div>
+        <strong>Krishna Sharma</strong><br>
+        <span>Practice Manager</span>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/logo/abhijeet.jpg">
+        </div>
+        <strong>Abhijeet Moriya</strong><br>
+        <span>Paralegal Executive</span>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/logo/ilyas.jpg">
+        </div>
+        <strong>Ilyas Hussain</strong><br>
+        <span>Report Writer</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+/* HERO — Full Width */
+.hero{
+  background:#0B1F3A;
+  color:#ffffff;
+  padding:4.5rem 0;
+}
+
+/* Remove container width restriction */
+.hero-full .hero-wrap{
+  max-width:100%;
+  width:100%;
+  padding:0 28px;
+}
+
+/* Make content span full width */
+.hero-full h1{
+  color:#ffffff;
+  font-size:2.6rem;
+  margin-bottom:12px;
+}
+
+.hero-full p{
+  color:#cbd5e1;
+  max-width:none;
+}
+
+/* SECTION */
+.section{padding:5rem 0}
+.section-title{text-align:center;max-width:750px;margin:0 auto 3.5rem}
+.section-title p{color:#475569}
+
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+.story-block{background:#fff;border-radius:12px;padding:3rem;box-shadow:0 30px 60px rgba(11,31,58,.12)}
+.story-block p{color:#334155;margin-bottom:1rem}
+.story-image img{width:100%;border-radius:14px;box-shadow:0 30px 60px rgba(11,31,58,.12);object-fit:cover}
+
+/* ORIGINAL CARD DESIGN (unchanged) */
+.grid{display:flex;flex-wrap:wrap;margin:-1rem}
+.col{width:100%;padding:1rem}
+@media(min-width:1024px){.col-3{width:33.333%}}
+
+.card{
+  background:#ffffff;border-radius:9px;
+  padding:2.5rem 2rem;position:relative;
+  box-shadow:0 20px 40px rgba(11,31,58,.1);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(11,31,58,.18)}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--accent)}
+.card p{color:#475569;margin-top:.8rem}
+
+/* Card icons */
+.card-icon{
+  width:54px;height:54px;border-radius:12px;
+  background:#FFF4D6;display:flex;align-items:center;justify-content:center;
+  margin-bottom:.6rem;
+}
+.card-icon img{width:28px;height:28px;object-fit:contain}
+
+/* TEAM */
+.team-section{background:#ffffff;padding:4rem 0;border-top:1px solid #e5e7eb}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.team-card{background:#f8fafc;border-radius:12px;padding:18px;box-shadow:0 14px 30px rgba(11,31,58,.08)}
+.team-photo{height:170px;border-radius:10px;overflow:hidden;margin-bottom:.6rem}
+.team-photo img{width:100%;height:100%;object-fit:cover}
+.team-card strong{color:#0b1f3a}
+.team-card span{color:#64748b;font-size:.9rem}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-wrap{grid-template-columns:1fr}
+  .story-grid{grid-template-columns:1fr}
+}
+</style>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <img src="./logo/logo-removebg-preview.png" alt="Logo" width="160">
+      <p>Australian immigration documentation specialists delivering compliant, decision-ready reports.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+     <a href="/privacypolicy">Privacy Policy</a>
+      <a href="/term">Terms & Conditions</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+  <div class="footer-bottom-left">
+    © 2025 Immigration Reports Inc. All rights reserved.
+  </div>
+
+  <div class="footer-bottom-right">
+    Powered by:
+    <a href="https://sourchtechnologies.com" target="_blank">
+      Sourch Technologies Private Limited
+    </a>
+  </div>
+</div>
+
+</footer>
+
+</body>
+</html>

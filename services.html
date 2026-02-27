@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Immigration Reports | Immigration Documentation Specialists</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/logo/icon-removebg-preview.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/logo/icon-removebg-preview.png">
+
+<!-- Apple / iPhone / iPad icon -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Web App Manifest (optional but good for PWA/Android) -->
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Windows / Safari Tab Color (optional) -->
+<meta name="theme-color" content="#0b1f3a">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --primary:#0B1F3A;
+  --accent:#C9A24D;
+  --bg:#F5F7FA;
+  --white:#ffffff;
+  --text:#1f2933;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 1rem;
+}
+
+h1,h2,h3{
+  color:var(--primary);
+  font-weight:700;
+}
+
+/* ================= HEADER ================= */
+header{
+  background:#ffffff;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1.2rem 0;
+}
+
+nav a{
+  margin-left:1.5rem;
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:500;
+}
+
+.btn{
+  padding:.75rem 1.5rem;
+  border-radius:9px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.btn-outline{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+
+/* ================= SECTION ================= */
+.section{
+  padding:5rem 0;
+}
+
+.section-title{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 4rem;
+}
+
+.section-title p{
+  color:#475569;
+}
+
+/* ================= CARD GRID ================= */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  margin:-1rem;
+}
+
+.col{
+  width:100%;
+  padding:1rem;
+}
+
+@media(min-width:1024px){
+  .col-3{width:33.333%;}
+}
+
+
+/* ================= FOOTER ================= */
+.site-footer{
+  background:linear-gradient(180deg,#08162e,#050f22);
+  color:#e5e7eb;
+  padding-top:70px;
+  margin-top:80px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:60px;
+  padding-bottom:50px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand p{
+  max-width:420px;
+  line-height:1.6;
+  color:#cbd5e1;
+}
+
+.footer-links h4{
+  font-size:1rem;
+  margin-bottom:16px;
+  color:#ffffff;
+}
+
+.footer-links a{
+  display:block;
+  color:#cbd5e1;
+  text-decoration:none;
+  margin-bottom:10px;
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{color:#ffffff;}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  font-size:0.9rem;
+}
+
+/* Left text */
+.footer-bottom-left{
+  color:#94a3b8;
+}
+
+/* Right text + link */
+.footer-bottom-right{
+  color:#cbd5e1;
+}
+
+.footer-bottom-right a{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.footer-bottom-right a:hover{
+  text-decoration:underline;
+}
+
+/* Mobile — stack vertically */
+@media(max-width:768px){
+  .footer-bottom{
+    flex-direction:column;
+    gap:6px;
+    text-align:center;
+  }
+}
+
+
+/* Responsive */
+@media(max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="immi-nav">
+  <div class="container header-inner">
+
+    <a href="/index" class="logo">
+      <img src="./logo/logo-removebg-preview.png" alt="Immigration Reports Logo" width="120px">
+    </a>
+
+    <!-- Burger Button (mobile only) -->
+    <button class="immi-nav__burger" id="immiBurgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="immi-nav__menu" id="immiNavMenu">
+      <a href="/index">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact Us</a>
+      <a href="https://calendly.com/immigrationreportsinc"
+         target="_blank"
+         class="btn btn-outline">
+        Book Consultation
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<style>
+  /* ==== Responsive Burger Menu (Scoped) ==== */
+
+.immi-nav__menu{
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+}
+
+.immi-nav__burger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:0;
+  cursor:pointer;
+}
+
+.immi-nav__burger span{
+  width:24px;
+  height:2px;
+  background:#0b1f3a;
+  transition:.3s;
+}
+
+/* ----- Mobile Mode ----- */
+@media(max-width:768px){
+
+  .immi-nav__burger{display:flex;}
+
+  .immi-nav__menu{
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    border-top:1px solid #e5e7eb;
+    padding:18px 20px;
+    display:none;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .immi-nav__menu.immi-show{
+    display:flex;
+  }
+
+  .immi-nav__menu a{
+    width:100%;
+  }
+}
+
+/* Burger → X animation */
+.immi-nav__burger.immi-active span:nth-child(1){
+  transform:rotate(45deg) translateY(7px);
+}
+.immi-nav__burger.immi-active span:nth-child(2){
+  opacity:0;
+}
+.immi-nav__burger.immi-active span:nth-child(3){
+  transform:rotate(-45deg) translateY(-7px);
+}
+
+</style>
+<script>
+const immiBurger = document.getElementById("immiBurgerBtn");
+const immiMenu = document.getElementById("immiNavMenu");
+
+immiBurger.addEventListener("click", ()=>{
+  immiMenu.classList.toggle("immi-show");
+  immiBurger.classList.toggle("immi-active");
+});
+</script>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Core Documentation Services</h2>
+      <p>Professionally drafted reports aligned with Department of Home Affairs standards.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- CARD 1 -->
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-1">
+          <h3>Training Plans</h3>
+          <p>Subclass 407 compliant training and upskilling frameworks.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-1">
+        <div class="expand-card">
+          <h3>Training Plans — Detailed Overview</h3>
+          <p>Structured training plan aligned to DHA standards.</p>
+          <ul>
+            <li>A training plan outlines how your business will provide structured learning and skill development to the nominee.</li>
+            <li>It is a key requirement for Subclass 407 (Training Visa), especially in cases where upskilling is necessary</li>
+            <li>A well-prepared training plan demonstrates your business’s commitment to workforce development and immigration compliance.</li>
+            <li>This visa allows your client to temporarily stay in Australia for occupational training or professional development.</li>
+            <li>It is ideal for enhancing skills or practical experience in their chosen field.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price"> $699</div>
+            <a class="btn-primary" href="https://dashboard.skydo.com/pay/pyl_HNvgPF">Buy Now</a>
+           <button class="btn-outline enquire-btn" data-service="Training Plans"> Enquire More</button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CARD 2 -->
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-2">
+          <h3>Labour Market Testing</h3>
+          <p>Evidence-based recruitment analysis for 482 & 186 visas.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-2">
+        <div class="expand-card">
+          <h3>Labour Market Testing — Report Scope</h3>
+          <p>Transparent recruitment documentation tailored to DHA assessment expectations.</p>
+          <ul>
+            <li>This report demonstrates genuine recruitment efforts made to hire locally before nominating an overseas worker.</li>
+            <li>It is a mandatory compliance requirement for Subclass 482 applications and for many Subclass 186 nomination submissions.</li>
+            <li>The report includes documented evidence of job advertisement placements across approved recruitment platforms.</li>
+            <li>It also presents a structured summary of applicants who applied for the role during the advertising period.</li>
+            <li> A narrative of recruitment efforts is provided, outlining assessment steps, screening outcomes, and hiring decisions.</li>
+            <li> The report is essential for demonstrating that no suitably qualified local candidates were available for the nominated position.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price">$499</div>
+            <a class="btn-primary" href="#">Buy Now</a>
+            <button class="btn-outline enquire-btn" data-service="Labour Market Testing">
+  Enquire More
+</button>
+          </div>
+        </div>
+      </div>
+<!-- ENQUIRY POPUP -->
+
+  <div class="modal-overlay" id="enquiryModal">
+  <div class="modal">
+    
+    <div class="modal-header">
+      <h3 id="modalServiceName">Service Enquiry</h3>
+      <span class="modal-close">&times;</span>
+    </div>
+
+    <p class="modal-sub">Provide your details and required documents.</p>
+
+  <form class="modal-form" id="serviceEnquiryForm">
+
+  <input type="hidden" name="access_key" value="2f1549e1-38da-4fee-8257-a86c15a3ce56">
+  <input type="hidden" name="from_name" value="IMMI Reports Website">
+  <input type="hidden" name="subject" value="New Service Enquiry">
+
+  <input type="hidden" name="Required Documents" id="docListValue">
+
+  <input type="hidden" name="auto_response"
+         value="Thank you for contacting IMMI Reports. We have received your enquiry and will get back to you shortly.">
+
+  <div class="form-row">
+    <input type="text" name="Name" placeholder="Full Name" required>
+    <input type="email" name="Email" placeholder="Email Address" required>
+  </div>
+
+  <div class="form-row">
+    <input type="tel" name="Phone" placeholder="Phone Number" required>
+    <input type="text" id="selectedService" name="Service" readonly>
+  </div>
+
+  <textarea rows="4" name="Details" placeholder="Project / Case Details"></textarea>
+
+  <h4 class="doc-title">Document Requirements</h4>
+  <ul class="doc-list" id="docList"></ul>
+
+  <button type="submit" class="btn-primary modal-submit">
+    Submit Enquiry
+  </button>
+</form>
+
+
+<!-- Thank-you popup -->
+<div id="thankYouPopup" style="
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);
+  backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;padding:26px 30px;border-radius:14px;
+    max-width:420px;width:90%;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,.2);">
+    <h3 style="margin-bottom:6px;color:#0b1f3a;">Thank You </h3>
+    <p style="color:#475569;margin-bottom:12px;">
+      Your enquiry has been submitted successfully.<br>We’ll contact you shortly.
+    </p>
+    <p style="font-size:13px;color:#64748b;">Reloading ....</p>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("serviceEnquiryForm");
+const popup = document.getElementById("thankYouPopup");
+
+function syncDocListToHiddenField() {
+  const items = [...document.querySelectorAll("#docList li")]
+    .map(li => li.innerText.trim());
+  document.getElementById("docListValue").value = items.join(", ");
+}
+
+form.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  syncDocListToHiddenField();
+
+  const formData = new FormData(form);
+
+  try {
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    popup.style.display = "flex";
+    form.reset();
+    setTimeout(()=>{ window.location.href = "/services"; }, 3000);
+
+  } catch(err){
+    alert("Submission failed — please try again.");
+  }
+});
+</script>
+
+
+
+  </div>
+</div>
+
+      <!-- CARD 3 -->
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-3">
+          <h3>Market Salary Rate</h3>
+          <p>Salary benchmarking to meet DHA fairness requirements.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-3">
+        <div class="expand-card">
+          <h3>Market Salary Rate — Report Inclusions</h3>
+          <p>Comparative salary research supported by industry and ABS datasets.</p>
+          <ul>
+            <li>This report compares the nominated salary with current industry benchmark levels to confirm that the compensation offered is fair and commercially appropriate.</li>
+            <li>It helps satisfy DHA assessment requirements by ensuring the position is not being undervalued or underpaid in comparison to comparable roles.</li>
+            <li>The report analyses market rates across relevant occupation categories and employment conditions to validate salary justification.</li>
+            <li>It supports transparency in remuneration evidence and strengthens compliance outcomes within the nomination process.</li>
+            <li>Applicable to both Subclass 482 and Subclass 186 visa applications where salary assessment and benchmarking are required.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price">$349</div>
+            <a class="btn-primary" href="#">Buy Now</a>
+            <button class="btn-outline enquire-btn" data-service="Market Salary Rate">
+  Enquire More
+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-4">
+          <h3>Need of the Nominee</h3>
+          <p>Justification reports highlighting nominee’s unique value.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-4">
+        <div class="expand-card">
+          <h3>Need of the Nominee — Scope</h3>
+          <p>Role necessity narrative demonstrating operational relevance and impact.</p>
+          <ul>
+            <li>This report explains why the selected nominee is the most suitable candidate for the role, clearly outlining how their qualifications, experience, and skillset align with the business’s operational needs.</li>
+            <li>It highlights the nominee’s unique capabilities and demonstrates how these attributes provide value that cannot be readily sourced from available local candidates.</li>
+            <li>The report presents a comparative rationale, showing how the nominee’s expertise supports business continuity, growth, and role-specific performance expectations.</li>
+            <li>It strengthens the justification for nomination by evidencing the business case behind selecting the nominee over alternative applicants.</li>
+            <li>Critical for Subclass 482 and Subclass 186 applications where establishing the nominee’s relevance and contribution to the business is essential.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price">$399</div>
+            <a class="btn-primary" href="#">Buy Now</a>
+           <button class="btn-outline enquire-btn" data-service="Need of the Nominee">
+  Enquire More
+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-5">
+          <h3>Genuine Need of Position</h3>
+          <p>Operational and growth-based role necessity reports.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-5">
+        <div class="expand-card">
+          <h3>Genuine Need of Position — Report Summary</h3>
+          
+          <ul>
+            <li>This document explains why the nominated role is genuinely required within your organisation and how it fits into your current operational structure.</li>
+            <li>It outlines how the position supports day-to-day business functions, contributes to productivity, and aligns with ongoing or projected business growth.</li>
+            <li>The report distinguishes the role as essential rather than discretionary, showing that it is integral to service delivery, compliance, or core operations.</li>
+            <li>It details organisational charts, functional responsibilities, and workflow dependencies to evidence the necessity of the position.</li>
+            <li>Commonly requested for Subclass 482, Subclass 186, and Subclass 494 visa applications where role justification is required.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price">$399</div>
+            <a class="btn-primary" href="#">Buy Now</a>
+             <button class="btn-outline enquire-btn" data-service="Genuine Need of Position">
+  Enquire More
+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-6">
+          <h3>Business Plans</h3>
+          <p>Document that outlines vision, financials, and market approach.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-6">
+        <div class="expand-card">
+          <h3>Business Plans — Package Inclusions</h3>
+          <p>Document that outlines vision, financials, and market approach.</p>
+          <ul>
+            <li>This document serves as a strategic blueprint outlining your company’s vision, operational model, financial position, and overall market approach, presented in a structured business format.</li>
+            <li>It substantiates the credibility and commercial strength of your organisation in employer-sponsored visa applications by demonstrating stability, capability, and long-term viability.</li>
+            <li>For Subclass 188 business and investor visas, it plays a critical role in evidencing your capacity to establish, manage, and operate a sustainable enterprise within the Australian economy.</li>
+            <li>Also applicable for regional sponsorship and DAMA pathways, the report typically includes business structure details, market and competitor insights, industry context, and financial projections supporting business justification.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price">$699</div>
+            <a class="btn-primary" href="#">Buy Now</a>
+           <button class="btn-outline enquire-btn" data-service="Business Plans">Enquire More </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!--CARD 7-->
+      
+      <div class="col col-3">
+        <div class="card service-card" data-panel="panel-7">
+          <h3>Sponsorship Bundle</h3>
+          <p>All-in-one documentation for 482 & 186 applications.</p>
+          <a href="#" class="expand-btn">Know More
+            <svg width="20" height="20"><path d="M5 10h10M11 5l4 5-4 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="expand-row" id="panel-7">
+        <div class="expand-card">
+          <h3>Sponsorship Bundle — Package Inclusions</h3>
+          <p>End-to-end documentation support for sponsor-level evidence.</p>
+          <ul>
+            <li>Genuine position + nominee justificationThis is a comprehensive documentation package that brings together all key reports and evidentiary documents required when sponsoring a skilled worker under Subclass 482 or Subclass 186 visa programs.</li>
+            <li>It is designed to streamline the nomination process, improve submission quality, and minimise delays that commonly arise from RFIs (Requests for Further Information).</li>
+            <li>The package consolidates multiple compliance-focused reports into a single structured submission, ensuring consistency, clarity, and alignment with DHA assessment expectations.</li>
+            <li>The documents typically included are the Labour Market Testing Report, Market Salary Rate Report, Need of the Nominee Report, and Genuine Need of the Position Report, forming a complete sponsorship documentation set.</li>
+          </ul>
+          <div class="expand-actions">
+            <div class="price">$999</div>
+            <a class="btn-primary" href="#">Buy Now</a>
+           <button class="btn-outline enquire-btn" data-service="Sponsorship Bundle">
+  Enquire More
+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+  .modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.modal{
+  background:#ffffff;
+  width:100%;
+  max-width:720px;
+  border-radius:14px;
+  box-shadow:0 40px 80px rgba(11,31,58,.25);
+  padding:28px 28px 32px;
+  animation:popup .25s ease;
+}
+
+@keyframes popup{
+  from{transform:translateY(20px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:6px;
+}
+
+.modal-header h3{
+  color:#0B1F3A;
+  margin:0;
+}
+
+.modal-close{
+  font-size:22px;
+  cursor:pointer;
+  color:#64748b;
+}
+
+.modal-sub{
+  color:#475569;
+  margin-bottom:14px;
+}
+
+.modal-form .form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.modal-form input,
+.modal-form textarea{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid #e2e8f0;
+  border-radius:8px;
+  font-size:.95rem;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus{
+  border-color:#0b1f3a;
+  outline:none;
+}
+
+.doc-title{
+  margin:14px 0 6px;
+  color:#0b1f3a;
+}
+
+.doc-list{
+  padding-left:18px;
+  margin-bottom:18px;
+  color:#334155;
+}
+
+.doc-list li{margin-bottom:5px;}
+
+.modal-submit{
+  width:100%;
+  padding:14px;
+  border-radius:9px;
+}
+
+/* Mobile */
+@media(max-width:640px){
+  .modal-form .form-row{grid-template-columns:1fr;}
+}
+
+  /* ================= CARD ================= */
+.card{
+  position:relative;
+  padding:3.5rem 2rem 2.5rem;
+  background:#ffffff;
+  border-radius:9px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(11,31,58,.1);
+  transition:.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 30px 60px rgba(11,31,58,.18);
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:4px;
+  background:var(--accent);
+}
+
+.card h3{margin-bottom:.8rem;}
+.card p{margin-bottom:2rem;color:#475569;}
+
+.card a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.75rem 1.5rem;
+  border-radius:9px;
+  border:1px solid var(--primary);
+  color:var(--primary);
+  font-weight:600;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.card a:hover{
+  background:var(--primary);
+  color:#ffffff;
+}
+
+.card svg{
+  margin-left:.5rem;
+  transition:.25s;
+}
+
+.card a:hover svg{
+  transform:translateX(4px);
+}
+
+/* Full-row expandable container */
+.expand-row{
+  width:100%;
+  display:none;
+  grid-column:1 / -1;
+}
+
+/* Expanded state card – styled to match theme */
+.expand-card{
+  background:#ffffff;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 30px 60px rgba(11,31,58,.12);
+  padding:32px;
+  margin-top:8px;
+}
+
+.expand-card h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.expand-card p{
+  color:#475569;
+  margin-bottom:12px;
+}
+
+.expand-card ul{
+  margin-bottom:16px;
+  padding-left:18px;
+  color:#334155;
+}
+
+.expand-card li{
+  margin-bottom:6px;
+}
+
+/* Pricing + actions */
+.expand-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+
+.price{
+  font-weight:700;
+  color:var(--primary);
+  font-size:1.2rem;
+}
+
+.btn-primary,
+.btn-outline{
+  padding:.75rem 1.3rem;
+  border-radius:9px;
+}
+
+.expand-row{
+  width:100%;
+  display:none;
+  grid-column:1 / -1;
+}
+
+.expand-card{
+  background:#ffffff;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 30px 60px rgba(11,31,58,.12);
+  padding:32px;
+  margin-top:8px;
+}
+
+.expand-card h3{margin-bottom:8px;color:var(--primary);}
+.expand-card p{color:#475569;margin-bottom:12px;}
+
+.expand-card ul{padding-left:18px;margin-bottom:16px;color:#334155;}
+.expand-card li{margin-bottom:6px;}
+
+.expand-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.price{font-weight:700;font-size:1.1rem;color:var(--primary);}
+
+
+</style>
+
+
+<script>
+document.querySelectorAll(".expand-btn").forEach(btn=>{
+  btn.addEventListener("click", e=>{
+    e.preventDefault();
+
+    const card = btn.closest(".service-card");
+    const panel = document.getElementById(card.dataset.panel);
+
+    document.querySelectorAll(".expand-row").forEach(r=>{
+      if(r !== panel) r.style.display="none";
+    });
+
+    panel.style.display = (panel.style.display==="block") ? "none" : "block";
+
+    if(panel.style.display==="block"){
+      panel.scrollIntoView({behavior:"smooth", block:"start"});
+    }
+  });
+});
+</script>
+<script>
+const modal = document.getElementById("enquiryModal");
+const serviceField = document.getElementById("selectedService");
+const serviceTitle = document.getElementById("modalServiceName");
+const docList = document.getElementById("docList");
+
+// 🎯 SERVICE–WISE DOCUMENT REQUIREMENTS
+const serviceDocs = {
+
+  "Training Plans": [
+    "Business profile / ABN Registration",
+    "Website Url If available",
+    "Training Agreement",
+    "Nomienee's current CV / resume",
+    "Training Duration",
+    "Trainer's Resume"
+  ],
+
+  "Labour Market Testing": [
+    "Job advertisement copies / URLs",
+    "Business Details (ABN, address, website)",
+    "Organizational Chart"
+  ],
+
+  "Market Salary Rate": [
+    
+    "Business Details (ABN, address, website)",
+    "Employment contract / salary details",
+    "Position description"
+  ],
+
+  "Need of the Nominee": [
+    "Business Details (ABN, address, website)",
+    "Nominee resume ",
+    "Organizational Chart",
+    "Position description"
+  ],
+
+  "Genuine Need of Position": [
+    "Business Details (ABN, address, website)",
+    "Nominee resume ",
+    "Organizational Chart",
+    "Position description"
+  ],
+
+  "Business Plans": [
+    "Business Details (ABN, address, website)",
+    "Organizational Chart",
+    "Financial statement",
+    "Operational model & growth strategy"
+  ],
+
+  "Sponsorship Bundle": [
+     "Business Details (ABN, address, website)",
+     "Organizational Chart",
+    "Salary Details",
+      "Nominee resume ",
+      "Position description",
+      
+     "Job advertisement copies / URLs"
+  ]
+
+  
+};
+
+// 🟡 OPEN POPUP + LOAD SERVICE DOCS
+document.querySelectorAll(".enquire-btn").forEach(btn=>{
+  btn.addEventListener("click", e=>{
+    e.preventDefault();
+
+    const service = btn.dataset.service;
+    serviceField.value = service;
+    serviceTitle.textContent = service + " — Enquiry";
+
+    // Build document list
+    docList.innerHTML = serviceDocs[service]
+      .map(item => `<li>✔ ${item}</li>`)
+      .join("");
+
+    modal.style.display = "flex";
+  });
+});
+
+// Close controls
+document.querySelector(".modal-close").onclick = ()=> modal.style.display = "none";
+window.onclick = e => { if(e.target === modal) modal.style.display = "none"; };
+</script>
+
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <img src="./logo/logo-removebg-preview.png" alt="Logo" width="160">
+      <p>Australian immigration documentation specialists delivering compliant, decision-ready reports.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+     <a href="/privacypolicy">Privacy Policy</a>
+      <a href="/term">Terms & Conditions</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+
+  </div>
+
+<div class="footer-bottom">
+  <div class="footer-bottom-left">
+    © 2025 Immigration Reports Inc. All rights reserved.
+  </div>
+
+  <div class="footer-bottom-right">
+    Powered by:
+    <a href="https://sourchtechnologies.com" target="_blank">
+      Sourch Technologies Private Limited
+    </a>
+  </div>
+</div>
+
+</footer>
+
+</body>
+</html>
